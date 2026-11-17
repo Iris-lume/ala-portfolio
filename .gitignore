@@ -1,0 +1,12 @@
+/dist/
+/node_modules/
+/.vercel/
+/.openai/
+/.agents/
+/site-publish/
+/作品集内容/
+/public/files/
+/scripts/selected-reference.*
+/*.tar.gz
+*.log
+.env*
