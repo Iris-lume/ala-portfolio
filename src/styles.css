@@ -197,4 +197,22 @@ footer{padding:90px var(--gutter) 0;background:var(--bg)}
 @media(prefers-reduced-motion:reduce){.category-heading .realtime-motif .motif-layer{translate:none;rotate:none;scale:none;transition:none}}
  .category-heading .realtime-motif[data-motif="flow"] .motif-accent path{stroke:var(--motif-glow)}
 
-.detail-screenshot{width:100%;margin-top:20px;display:block;border:1px solid var(--line)}
+.detail-screenshot{width:100%;margin-top:20px;display:block;border:1px solid var(--line)}/* Selected explorations: a lead film followed by two contrasting studies. */
+.featured-explorations{padding:clamp(44px,7vw,110px) 5.25vw;background:var(--bg);color:var(--paper);scroll-margin-top:var(--home-header,82px)}
+.featured-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:28px}
+.featured-heading h2{font-size:clamp(19px,2vw,28px)}.featured-heading h2 span{display:inline-block;color:var(--muted);font-size:12px;margin-inline-start:12px}.featured-heading>a{font-size:13px;color:var(--lavender)}
+.featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,62px)}.featured-work:first-child{grid-column:1/-1}
+.featured-media{aspect-ratio:1.35;display:grid;place-items:center;overflow:hidden;background:#161518;border:1px solid #272528}.featured-work:first-child .featured-media{aspect-ratio:16/9;max-height:68svh;background:#101011}.featured-media.featured-light{background:#f6f5f2}.featured-media a{display:block;width:100%;height:100%;min-height:0}.featured-media :is(img,video){display:block;width:100%;height:100%;min-height:0;object-fit:contain}.featured-media.featured-portrait video{width:auto;max-width:100%;aspect-ratio:4/5}
+.featured-caption{border-top:1px solid var(--line);margin-top:14px;padding-top:13px}.featured-label,.featured-caption p{font-size:12px;color:var(--muted)}.featured-caption h3{font-size:clamp(19px,2.4vw,36px);margin:6px 0}.featured-caption h3 a{display:inline-flex;align-items:center;gap:12px}.featured-caption h3 a span{color:var(--lavender);font-size:16px}.featured-caption h3 a:hover{color:var(--lavender)}
+@media(max-width:620px){.featured-grid{grid-template-columns:minmax(0,1fr);row-gap:32px}.featured-heading h2 span{margin-inline-start:7px}}
+/* Selected explorations: quiet index against a continuous still-image rail. */
+.featured-explorations{--feature-paper:#e9e8e3;--feature-ink:#171619;background:var(--feature-paper);color:var(--feature-ink);padding:clamp(24px,5vw,76px) 5.25vw;scroll-margin-top:var(--home-header,82px)}
+.featured-spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,36%);gap:clamp(18px,6vw,96px);padding:clamp(10px,2vw,28px);border:1px solid #87827e;border-radius:18px}
+.featured-side{position:sticky;top:calc(var(--home-header,82px) + 22px);align-self:start;min-height:min(58svh,500px);display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:14px clamp(6px,3vw,48px)}
+.featured-side h2{font-size:clamp(15px,1.5vw,22px)}.featured-side h2 span{display:block;color:#5d595c;font-size:11px;margin-top:5px}
+.featured-index{display:grid;gap:0}.featured-index a{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px 9px;padding:7px 0;font-size:clamp(15px,2vw,30px);letter-spacing:-.025em;line-height:1.17;color:#6d686d;transition:color .2s}
+.featured-index a small{font-size:10px;letter-spacing:0;color:#5d5267;visibility:hidden}.featured-index a:is([aria-current=true],:hover,:focus-visible){color:var(--feature-ink)}.featured-index a:is([aria-current=true],:hover,:focus-visible) small{visibility:visible}
+.featured-all{align-self:flex-start;font-size:11px;border-bottom:1px solid #84748e;padding-bottom:5px}
+.featured-rail{display:grid;gap:7px;min-width:0}.featured-still{display:block;overflow:hidden;background:#dbd8d2}.featured-still img{display:block;width:100%;height:auto}.featured-spread a:focus-visible{outline-color:#624879;outline-offset:2px}
+@media(max-width:650px){.featured-explorations{padding:22px 4vw}.featured-spread{grid-template-columns:minmax(0,1fr) minmax(0,52%);gap:10px;border-radius:12px}.featured-side{min-height:0;padding:6px 2px}.featured-index a{display:block;font-size:clamp(12px,3.7vw,19px);padding:7px 0}.featured-index a small{display:none}.featured-side h2 span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.featured-index a{transition:none}}
