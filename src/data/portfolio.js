@@ -74,6 +74,7 @@ export const projects = [
     "english": "Rainbow Bubbles",
     "featured": true,
     "video": "/public/videos/bubbles.mp4",
+    "screenshots": ["/public/images/bubbles-td-network.png","/public/images/bubbles-code.png"],
     "description": "治愈系实时互动泡泡影像。泛着彩虹光泽的泡泡缓缓飘起，点击就会轻轻炸开，简单的交互带来轻松的游玩感。",
     "tools": "TouchDesigner"
   },
@@ -85,6 +86,7 @@ export const projects = [
     "featured": true,
     "video": "/public/videos/dsk-ball.mp4",
     "previewBackground": "black",
+    "screenshot": "/public/images/disco-td-network.png",
     "description": "复刻复古迪斯科镜面球效果。球体持续旋转，反射斑斓彩色方块灯光，延伸出无限纵深的隧道空间，适配 VJ 现场、舞台影像输出。",
     "tools": "TouchDesigner"
   },
@@ -125,28 +127,35 @@ export const projects = [
     "id": "realtime-4",
     "category": "realtime",
     "title": "寒露",
-    "english": "寒露",
+    "english": "Cold Dew",
     "featured": false,
-    "video": "/public/videos/cold-dew.mp4"
+    "video": "/public/videos/cold-dew.mp4",
+    "description": "本作品以二十四节气「寒露」为主题，实时模拟夜色里摇曳草叶与露珠，呈现秋夜清寂微凉的氛围。",
+    "tools": "TouchDesigner"
   },
   {
     "id": "realtime-portfolio-effect",
     "category": "realtime",
     "title": "螺旋点阵",
-    "english": "螺旋点阵",
+    "english": "Spiral Dot Matrix",
     "featured": false,
     "video": "/public/videos/portfolio-effect.mp4",
-    "previewBackground": "black"
+    "previewBackground": "black",
+    "screenshots": ["/public/images/spiral-td-network.jpg"],
+    "description": "本作品参考菲波那契叶序数学模型，运用黄金角 137.5° 公式在 TouchDesigner 中生成参数化螺旋点阵，复刻自然的生长秩序，探索数学与实时视觉的美学结合。",
+    "tools": "TouchDesigner"
   },
   {
-    "id": "realtime-ribbon",
+    "id": "realtime-gesture",
     "category": "realtime",
-    "title": "粒子丝带",
-    "english": "Particle ribbon",
+    "title": "门神御祟・守屏卫安",
+    "english": "Gesture Interaction",
     "featured": false,
-    "video": "/public/videos/particle-ribbon.mp4",
-    "videoStart": 3.5,
-    "previewBackground": "black"
+    "video": "/public/videos/gesture-interaction.mp4",
+    "previewBackground": "black",
+    "screenshots": ["/public/images/gesture-network-1.png","/public/images/gesture-network-2.png","/public/images/gesture-network-3.png"],
+    "description": "融合传统门神 IP 与反诈科普的体感交互作品。基于姿态识别，识别使用者方位分配对应门神，举手绑定操控权限，挥臂击打小鬼触发粒子碎裂效果，解锁不同反诈短片与进度，以沉浸式互动实现反诈宣传。",
+    "tools": "TouchDesigner、MediaPipe 姿态识别"
   },
 
   {
@@ -158,7 +167,10 @@ export const projects = [
     "video": "/public/videos/organic-terrain.mp4",
     "previewBackground": "white",
     "videoShape": "portrait",
-    "tags": ["p5.js"]
+    "tags": ["p5.js"],
+    "screenshots": ["/public/images/terrain-code.png"],
+    "description": "通过噪声生成等高线，模拟自然地形的流动形态，研究算法如何塑造具备自然感的有机图形。",
+    "tools": "p5.js"
   },
 
   {
@@ -169,7 +181,10 @@ export const projects = [
     "featured": true,
     "video": "/public/videos/particle-fireworks.mp4",
     "previewBackground": "black",
-    "tags": ["p5.js"]
+    "tags": ["p5.js"],
+    "screenshots": ["/public/images/fireworks-code.png"],
+    "description": "基于 p5.js 粒子系统实现的交互式烟花效果。点击屏幕触发粒子发射，粒子向外扩散、衰减，模拟烟花绽放、消散的动态过程。",
+    "tools": "p5.js"
   },
   {
     "id": "coding-3",
@@ -179,17 +194,21 @@ export const projects = [
     "featured": false,
     "video": "/public/videos/fluid-text.mp4",
     "previewBackground": "black",
-    "tags": ["TouchDesigner"]
+    "screenshots": ["/public/images/fluid-type-code.png"],
+    "description": "以文字为基底，结合粒子流场算法打造动态字体效果。文字轮廓由流动粒子构成，粒子沿着流场方向扰动、游走，在保留字体识别性的同时，赋予文字流动、变幻的质感，探索生成式动态字体的表达形式。",
+    "tools": "p5.js"
   },
   {
     "id": "coding-4",
     "category": "coding",
-    "title": "ALA 动态片头",
-    "english": "ALA motion intro",
+    "title": "故障文字",
+    "english": "Glitch Text",
     "featured": false,
     "video": "/public/videos/ala-intro.mp4",
     "previewBackground": "black",
-    "tags": ["TouchDesigner"]
+    "screenshots": ["/public/images/glitch-text-code.png"],
+    "description": "基于 p5.js 的生成式故障文字，线条拆分错位，色彩偏移，复刻复古电子屏幕的失真质感。",
+    "tools": "p5.js"
   },
   {
     "id": "coding-5",
@@ -209,19 +228,11 @@ export const projects = [
     "featured": false,
     "video": "/public/videos/particle-ribbon.mp4",
     "previewBackground": "black",
-    "tags": ["TouchDesigner"]
+    "screenshots": ["/public/images/ribbon-code.png"],
+    "description": "基于 p5.js 创作的生成式粒子视觉。粒子跟随流动场运动，连成柔滑交织的光带，紫蓝渐变线条不断游走缠绕，形成有机舒展的动态肌理，展现流体般的生成美学。",
+    "tools": "p5.js"
   },
 
-  {
-    "id": "motion-1",
-    "category": "motion",
-    "title": "海边小屋",
-    "english": "Seaside cottage",
-    "featured": true,
-    "cover": "/public/images/seaside-fish-house.png",
-    "width": 1448,
-    "height": 1086
-  },
   {
     "id": "motion-5",
     "category": "motion",
@@ -232,39 +243,6 @@ export const projects = [
     "coverAspect": "scene",
     "width": 1448,
     "height": 1086
-  },
-  {
-    "id": "motion-6",
-    "category": "motion",
-    "title": "崖边补给站",
-    "english": "Cliffside trading post",
-    "featured": false,
-    "cover": "/public/images/cliffside-trading-post.png",
-    "coverAspect": "scene",
-    "width": 1448,
-    "height": 1086
-  },
-  {
-    "id": "motion-7",
-    "category": "motion",
-    "title": "风车面包坊",
-    "english": "Windmill bakery",
-    "featured": false,
-    "cover": "/public/images/windmill-bakery.png",
-    "coverAspect": "scene",
-    "width": 1448,
-    "height": 1086
-  },
-  {
-    "id": "motion-8",
-    "category": "motion",
-    "title": "奇幻植物设定",
-    "english": "Fantasy plant concepts",
-    "featured": false,
-    "cover": "/public/images/fantasy-plants.png",
-    "coverAspect": "square",
-    "width": 1280,
-    "height": 1080
   },
   {
     "id": "motion-9",
@@ -287,6 +265,80 @@ export const projects = [
     "coverAspect": "portrait",
     "width": 1024,
     "height": 1536
+  },
+  {
+    "id": "motion-11",
+    "category": "motion",
+    "title": "草莓蛋糕",
+    "english": "Strawberry cake",
+    "featured": false,
+    "cover": "/public/images/strawberry-cake.png",
+    "coverAspect": "square",
+    "width": 1536,
+    "height": 1536
+  },
+  {
+    "id": "motion-12",
+    "category": "motion",
+    "title": "咖喱饭",
+    "english": "Curry rice",
+    "featured": false,
+    "cover": "/public/images/curry-rice.png",
+    "coverAspect": "square",
+    "width": 1536,
+    "height": 1536
+  },
+  {
+    "id": "graphic-22",
+    "category": "graphic",
+    "title": "雨",
+    "english": "Rain",
+    "featured": false,
+    "cover": "/public/images/rain-poster.png",
+    "coverAspect": "portrait",
+    "width": 1254,
+    "height": 1881,
+    "description": "复古拼贴风插画海报，以几何化图形表现雨、云与花朵，质朴的版画质感，简约叙事，传递雨水的自然氛围。",
+    "tools": "Photoshop"
+  },
+  {
+    "id": "graphic-19",
+    "category": "graphic",
+    "title": "24 小时时间分配",
+    "english": "24 Hours breakdown",
+    "featured": false,
+    "cover": "/public/images/time-24-hours.png",
+    "coverAspect": "portrait",
+    "width": 1086,
+    "height": 1448,
+    "description": "使用 PS 制作的信息可视化海报。以一天 24 小时的数据为基础，结合环形图、条形图、方格矩阵多种图表形式，直观拆解睡眠、学习工作、休闲等时间占比，用简洁清晰的版式和色彩区分信息，探索数据可视化的平面表达。",
+    "tools": "Photoshop"
+  },
+  {
+    "id": "graphic-20",
+    "category": "graphic",
+    "title": "汉堡解构",
+    "english": "Burger Deconstruction",
+    "featured": false,
+    "cover": "/public/images/burger-study.png",
+    "coverAspect": "portrait",
+    "width": 1086,
+    "height": 1448,
+    "description": "PS 食物解构创意海报，把汉堡分层悬浮拆解，叠加线框与网点肌理，用解构式版式探索美食视觉表达。",
+    "tools": "Photoshop"
+  },
+  {
+    "id": "graphic-21",
+    "category": "graphic",
+    "title": "ALA 品牌视觉",
+    "english": "ALA brand identity",
+    "featured": false,
+    "cover": "/public/images/ala-brand-identity.png",
+    "coverAspect": "portrait",
+    "width": 1086,
+    "height": 1448,
+    "description": "个人 IP 品牌视觉识别系统设计，使用 PS 完成。包含定制字体标志、标准色卡、辅助图形与落地应用展示，配色温暖活泼，风格轻松治愈，完成 LOGO 规范、色彩体系、纹样延展以及文创物料的视觉落地，打造统一的个人创作者品牌形象。",
+    "tools": "Photoshop"
   },
   {
     "id": "graphic-9",

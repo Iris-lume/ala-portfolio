@@ -7,6 +7,44 @@ const selections = [
   ['graphic-5', '装饰纹样']
 ];
 
+export function workStripMarkup() {
+  const ids = ['graphic-22', 'motion-10', 'graphic-21', 'graphic-6', 'motion-5'];
+  const works = ids.map(id => projects.find(project => project.id === id)).filter(project => project?.cover);
+  return `<section class="work-strip" aria-labelledby="work-strip-heading">
+    <div class="work-strip-heading">
+      <h2 id="work-strip-heading">更多作品 <span lang="en">More work</span></h2>
+      <div class="work-strip-controls">
+        <button type="button" data-strip-step="-1" aria-label="向左浏览作品" aria-controls="work-strip-track" disabled>←</button>
+        <button type="button" data-strip-step="1" aria-label="向右浏览作品" aria-controls="work-strip-track">→</button>
+      </div>
+    </div>
+    <div class="work-strip-track" id="work-strip-track">${works.map(project => `<a href="#/project/${project.id}">
+      <img src="${project.cover}" alt="" loading="lazy" decoding="async">
+      <span>${project.title}</span>
+    </a>`).join('')}</div>
+  </section>`;
+}
+
+function mountWorkStrip(root, signal) {
+  const track = root.querySelector('.work-strip-track');
+  if (!track) return;
+  const [previous, next] = root.querySelectorAll('[data-strip-step]');
+  function updateControls() {
+    previous.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+  }
+  for (const button of [previous, next]) {
+    button.addEventListener('click', () => {
+      const step = track.children[1].offsetLeft - track.children[0].offsetLeft;
+      const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+      track.scrollBy({left: step * Number(button.dataset.stripStep), behavior});
+    }, {signal});
+  }
+  track.addEventListener('scroll', updateControls, {passive:true, signal});
+  window.addEventListener('resize', updateControls, {signal});
+  updateControls();
+}
+
 export function selectedMarkup() {
   const works = selections.flatMap(([id, label]) => {
     const p = projects.find(p => p.id === id && p.cover);
@@ -20,6 +58,7 @@ export function mountSelected(root){
   if(!panel)return()=>{};
   const links=[...panel.querySelectorAll('[data-featured-link]')], frames=[...panel.querySelectorAll('[data-featured-image]')];
   const controller=new AbortController(),{signal}=controller;
+  mountWorkStrip(root, signal);
   let task=0, active=-1;
   function update(){
     task=0;
