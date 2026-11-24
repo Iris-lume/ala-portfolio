@@ -57,6 +57,40 @@ export const categories = [
 
 export const projects = [
   {
+    "id": "realtime-gesture",
+    "category": "realtime",
+    "title": "门神御祟・守屏卫安",
+    "english": "Gesture Interaction",
+    "featured": false,
+    "video": "/public/videos/gesture-interaction.mp4",
+    "previewBackground": "black",
+    "screenshots": ["/public/images/gesture-network-1.png","/public/images/gesture-network-2.png","/public/images/gesture-network-3.png"],
+    "description": "融合传统门神 IP 与反诈科普的体感交互作品。基于姿态识别，识别使用者方位分配对应门神，举手绑定操控权限，挥臂击打小鬼触发粒子碎裂效果，解锁不同反诈短片与进度，以沉浸式互动实现反诈宣传。",
+    "tools": "TouchDesigner、MediaPipe 姿态识别"
+  },
+  {
+    "id": "realtime-orb-dissolution",
+    "category": "realtime",
+    "title": "光球消融",
+    "english": "Orb Dissolution",
+    "featured": false,
+    "video": "/public/videos/orb-dissolution.mp4",
+    "previewBackground": "black",
+    "description": "完整光球随噪波扰动逐步融化，RGB 色彩通道分离，化作细碎彩粒垂落消散，探索光、色彩与粒子流动的动态关系。",
+    "tools": "TouchDesigner"
+  },
+  {
+    "id": "realtime-char-deconstruction",
+    "category": "realtime",
+    "title": "字符解构",
+    "english": "Character Deconstruction",
+    "featured": false,
+    "video": "/public/videos/character-deconstruction.mp4",
+    "previewBackground": "black",
+    "description": "以点阵粒子为基础单元，拆解字母骨架、重组字体形态。",
+    "tools": "TouchDesigner"
+  },
+  {
     "id": "realtime-dandelion",
     "category": "realtime",
     "title": "风的来信",
@@ -145,19 +179,45 @@ export const projects = [
     "description": "本作品参考菲波那契叶序数学模型，运用黄金角 137.5° 公式在 TouchDesigner 中生成参数化螺旋点阵，复刻自然的生长秩序，探索数学与实时视觉的美学结合。",
     "tools": "TouchDesigner"
   },
-  {
-    "id": "realtime-gesture",
-    "category": "realtime",
-    "title": "门神御祟・守屏卫安",
-    "english": "Gesture Interaction",
-    "featured": false,
-    "video": "/public/videos/gesture-interaction.mp4",
-    "previewBackground": "black",
-    "screenshots": ["/public/images/gesture-network-1.png","/public/images/gesture-network-2.png","/public/images/gesture-network-3.png"],
-    "description": "融合传统门神 IP 与反诈科普的体感交互作品。基于姿态识别，识别使用者方位分配对应门神，举手绑定操控权限，挥臂击打小鬼触发粒子碎裂效果，解锁不同反诈短片与进度，以沉浸式互动实现反诈宣传。",
-    "tools": "TouchDesigner、MediaPipe 姿态识别"
-  },
 
+  {
+    "id": "coding-2",
+    "category": "coding",
+    "title": "粒子烟花",
+    "english": "Particle fireworks",
+    "featured": true,
+    "video": "/public/videos/particle-fireworks.mp4",
+    "previewBackground": "black",
+    "tags": ["p5.js"],
+    "screenshots": ["/public/images/fireworks-code.png"],
+    "description": "基于 p5.js 粒子系统实现的交互式烟花效果。点击屏幕触发粒子发射，粒子向外扩散、衰减，模拟烟花绽放、消散的动态过程。",
+    "tools": "p5.js"
+  },
+  {
+    "id": "coding-4",
+    "category": "coding",
+    "title": "故障文字",
+    "english": "Glitch Text",
+    "featured": false,
+    "video": "/public/videos/ala-intro.mp4",
+    "previewBackground": "black",
+    "screenshots": ["/public/images/glitch-text-code.png"],
+    "description": "基于 p5.js 的生成式故障文字，线条拆分错位，色彩偏移，复刻复古电子屏幕的失真质感。",
+    "tools": "p5.js"
+  },
+  {
+    "id": "coding-7",
+    "category": "coding",
+    "title": "幻想生物",
+    "english": "Fantasy Creature",
+    "featured": false,
+    "video": "/public/videos/fantasy-creature.mp4",
+    "previewBackground": "black",
+    "tags": ["p5.js"],
+    "screenshots": ["/public/images/fantasy-creature-code.png"],
+    "description": "创意编程生成的抽象生命形态，由点阵与波动曲线组成发散结构，依靠参数扰动形成灵动舒展的轮廓，塑造数字世界里的幻想生物。",
+    "tools": "p5.js"
+  },
   {
     "id": "coding-1",
     "category": "coding",
@@ -174,19 +234,6 @@ export const projects = [
   },
 
   {
-    "id": "coding-2",
-    "category": "coding",
-    "title": "粒子烟花",
-    "english": "Particle fireworks",
-    "featured": true,
-    "video": "/public/videos/particle-fireworks.mp4",
-    "previewBackground": "black",
-    "tags": ["p5.js"],
-    "screenshots": ["/public/images/fireworks-code.png"],
-    "description": "基于 p5.js 粒子系统实现的交互式烟花效果。点击屏幕触发粒子发射，粒子向外扩散、衰减，模拟烟花绽放、消散的动态过程。",
-    "tools": "p5.js"
-  },
-  {
     "id": "coding-3",
     "category": "coding",
     "title": "流体文字",
@@ -196,18 +243,6 @@ export const projects = [
     "previewBackground": "black",
     "screenshots": ["/public/images/fluid-type-code.png"],
     "description": "以文字为基底，结合粒子流场算法打造动态字体效果。文字轮廓由流动粒子构成，粒子沿着流场方向扰动、游走，在保留字体识别性的同时，赋予文字流动、变幻的质感，探索生成式动态字体的表达形式。",
-    "tools": "p5.js"
-  },
-  {
-    "id": "coding-4",
-    "category": "coding",
-    "title": "故障文字",
-    "english": "Glitch Text",
-    "featured": false,
-    "video": "/public/videos/ala-intro.mp4",
-    "previewBackground": "black",
-    "screenshots": ["/public/images/glitch-text-code.png"],
-    "description": "基于 p5.js 的生成式故障文字，线条拆分错位，色彩偏移，复刻复古电子屏幕的失真质感。",
     "tools": "p5.js"
   },
   {
@@ -232,7 +267,28 @@ export const projects = [
     "description": "基于 p5.js 创作的生成式粒子视觉。粒子跟随流动场运动，连成柔滑交织的光带，紫蓝渐变线条不断游走缠绕，形成有机舒展的动态肌理，展现流体般的生成美学。",
     "tools": "p5.js"
   },
-
+  {
+    "id": "motion-12",
+    "category": "motion",
+    "title": "咖喱饭",
+    "english": "Curry rice",
+    "featured": false,
+    "cover": "/public/images/curry-rice.png",
+    "coverAspect": "square",
+    "width": 1536,
+    "height": 1536
+  },
+  {
+    "id": "motion-11",
+    "category": "motion",
+    "title": "草莓蛋糕",
+    "english": "Strawberry cake",
+    "featured": false,
+    "cover": "/public/images/strawberry-cake.png",
+    "coverAspect": "square",
+    "width": 1536,
+    "height": 1536
+  },
   {
     "id": "motion-5",
     "category": "motion",
@@ -267,41 +323,6 @@ export const projects = [
     "height": 1536
   },
   {
-    "id": "motion-11",
-    "category": "motion",
-    "title": "草莓蛋糕",
-    "english": "Strawberry cake",
-    "featured": false,
-    "cover": "/public/images/strawberry-cake.png",
-    "coverAspect": "square",
-    "width": 1536,
-    "height": 1536
-  },
-  {
-    "id": "motion-12",
-    "category": "motion",
-    "title": "咖喱饭",
-    "english": "Curry rice",
-    "featured": false,
-    "cover": "/public/images/curry-rice.png",
-    "coverAspect": "square",
-    "width": 1536,
-    "height": 1536
-  },
-  {
-    "id": "graphic-22",
-    "category": "graphic",
-    "title": "雨",
-    "english": "Rain",
-    "featured": false,
-    "cover": "/public/images/rain-poster.png",
-    "coverAspect": "portrait",
-    "width": 1254,
-    "height": 1881,
-    "description": "复古拼贴风插画海报，以几何化图形表现雨、云与花朵，质朴的版画质感，简约叙事，传递雨水的自然氛围。",
-    "tools": "Photoshop"
-  },
-  {
     "id": "graphic-19",
     "category": "graphic",
     "title": "24 小时时间分配",
@@ -312,6 +333,19 @@ export const projects = [
     "width": 1086,
     "height": 1448,
     "description": "使用 PS 制作的信息可视化海报。以一天 24 小时的数据为基础，结合环形图、条形图、方格矩阵多种图表形式，直观拆解睡眠、学习工作、休闲等时间占比，用简洁清晰的版式和色彩区分信息，探索数据可视化的平面表达。",
+    "tools": "Photoshop"
+  },
+  {
+    "id": "graphic-21",
+    "category": "graphic",
+    "title": "ALA 品牌视觉",
+    "english": "ALA brand identity",
+    "featured": false,
+    "cover": "/public/images/ala-brand-identity.png",
+    "coverAspect": "portrait",
+    "width": 1086,
+    "height": 1448,
+    "description": "个人 IP 品牌视觉识别系统设计，使用 PS 完成。包含定制字体标志、标准色卡、辅助图形与落地应用展示，配色温暖活泼，风格轻松治愈，完成 LOGO 规范、色彩体系、纹样延展以及文创物料的视觉落地，打造统一的个人创作者品牌形象。",
     "tools": "Photoshop"
   },
   {
@@ -328,16 +362,16 @@ export const projects = [
     "tools": "Photoshop"
   },
   {
-    "id": "graphic-21",
+    "id": "graphic-22",
     "category": "graphic",
-    "title": "ALA 品牌视觉",
-    "english": "ALA brand identity",
+    "title": "雨",
+    "english": "Rain",
     "featured": false,
-    "cover": "/public/images/ala-brand-identity.png",
+    "cover": "/public/images/rain-poster.png",
     "coverAspect": "portrait",
-    "width": 1086,
-    "height": 1448,
-    "description": "个人 IP 品牌视觉识别系统设计，使用 PS 完成。包含定制字体标志、标准色卡、辅助图形与落地应用展示，配色温暖活泼，风格轻松治愈，完成 LOGO 规范、色彩体系、纹样延展以及文创物料的视觉落地，打造统一的个人创作者品牌形象。",
+    "width": 1254,
+    "height": 1881,
+    "description": "复古拼贴风插画海报，以几何化图形表现雨、云与花朵，质朴的版画质感，简约叙事，传递雨水的自然氛围。",
     "tools": "Photoshop"
   },
   {
